@@ -8,6 +8,10 @@ import (
 	"os"
 )
 
+type Repository struct {
+	DefaultBranch string `json:"default_branch"`
+}
+
 func main() {
 	var username, repository string
 	fmt.Print("Enter GitHub username: ")
