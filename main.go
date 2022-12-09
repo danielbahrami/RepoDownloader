@@ -31,6 +31,11 @@ func main() {
 	}
 	defer request.Body.Close()
 
+	if request.StatusCode == http.StatusNotFound {
+		fmt.Printf("Repository \"%s/%s\" is either private or does not exist\n", username, repository)
+		os.Exit(1)
+	}
+
 	_, err = io.Copy(zipFile, request.Body)
 	if err != nil {
 		fmt.Printf("Failed to save zip file: %v\n", err)
