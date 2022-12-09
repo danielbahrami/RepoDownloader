@@ -1,2 +1,2 @@
 # Repository-Downloader
-CLI tool for downloading repositories on GitHub
+CLI tool for downloading public repositories on GitHub
