@@ -23,4 +23,11 @@ func main() {
 		os.Exit(1)
 	}
 	defer zipFile.Close()
+
+	request, err := http.Get(zipUrl)
+	if err != nil {
+		fmt.Printf("Failed to download zip file: %v\n", err)
+		os.Exit(1)
+	}
+	defer request.Body.Close()
 }
