@@ -30,4 +30,10 @@ func main() {
 		os.Exit(1)
 	}
 	defer request.Body.Close()
+
+	_, err = io.Copy(zipFile, request.Body)
+	if err != nil {
+		fmt.Printf("Failed to save zip file: %v\n", err)
+		os.Exit(1)
+	}
 }
