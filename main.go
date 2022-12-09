@@ -36,4 +36,6 @@ func main() {
 		fmt.Printf("Failed to save zip file: %v\n", err)
 		os.Exit(1)
 	}
+
+	fmt.Printf("Successfully downloaded %s\n", repository)
 }
