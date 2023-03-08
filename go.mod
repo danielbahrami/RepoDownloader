@@ -1,3 +1,3 @@
-module github.com/danielbahrami/repository-downloader
+module github.com/danielbahrami/repo-downloader
 
 go 1.20
